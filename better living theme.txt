@@ -1,0 +1,1509 @@
+<!DOCTYPE html> 
+
+<!--
+
+                    BETTER LIVING theme by @gatoscodes
+                        
+                base code by egg.design. full credits on post. 
+                    
+                    ✘ don’t steal or claim as your own. 
+                    ✘ don’t move or remove credit.
+                
+                ✔ editing/customizing for personal use is fine
+                    ↳ basic knowledge of html and css is required to do so
+
+-->
+
+<html>
+    <head> 
+    
+    <!-- favicon -->
+     <link rel="shortcut icon" href="{Favicon}" />
+     
+     <!-- rss -->
+     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+     
+     <!-- title and description -->
+        <title>{Title}</title>
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        
+    <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+        <!-- ICON FONTS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+        <link href="//solrainha.github.io/honeybee/honeybee.css" rel="stylesheet">
+         
+         <!-- this line ensures that your theme will be mobile friendly -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        
+         <!-- jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+   
+<!------------------------------ META OPTIONS ------------------------------>
+    <!-- IMAGE OPTIONS-->
+        <meta name="image:background" content="" />
+   
+   <!-- COLOURS  -->
+        <meta name="color:background" content="#f8f8f8" />
+        <meta name="color:sidebar" content="#000" />
+        <meta name="color:title" content="#fff" />
+        <meta name="color:subtitle" content="#fff" />
+        <meta name="color:header" content="#fff" />
+        <meta name="color:accent" content="#000" />
+        <meta name="color:sidebar links" content="#fff" />
+        <meta name="color:sidebar links hover" content="#888" />
+        <meta name="color:tags" content="#606060" />
+        <meta name="color:tags hover" content="#333" />
+        <meta name="color:text" content="#222" />
+        <meta name="color:posts accent" content="#ccc" />
+        <meta name="color:blockquote border" content="#222"/>
+        <meta name="color:links" content="#222" />
+        <meta name="color:posts" content="#fff" />
+        <meta name="color:selection background" content="#000" />
+        <meta name="color:selection text" content="#fff" />
+
+    <!-- TEXT OPTIONS -->
+        <meta name="text:title" content="Better Living">
+        <meta name="text:subtitle" content="Industries">
+        <meta name="text:title font" content="Poppins" />
+        <meta name="text:subtitle font" content="Poppins" />
+        <meta name="text:posts font" content="Poppins" />
+        <meta name="text:notes tags and sidebar font " content="Poppins" />
+        <meta name="text:double home" content="">
+        <meta name="text:ask title" content="">
+        <meta name="text:double ask" content="">
+        <meta name="text:double sumbmit" content="">
+        <meta name="text:double archive" content="">
+        <meta name="text:link 1 title" content="">
+        <meta name="text:double link 1 title" content="">
+        <meta name="text:link 1 URL" content="">
+        <meta name="text:link 2 title" content="">
+        <meta name="text:double link 2 title" content="">
+        <meta name="text:link 2 URL" content="">
+        <meta name="text:link 3 title" content="">
+        <meta name="text:double link 3 title" content="">
+        <meta name="text:link 3 URL" content="">
+        
+        <!-- booleans -->
+        <meta name="if:full background" content="" />
+        <meta name="if:show avatar" content="" />
+        <meta name="if:link 1" content="" />
+        <meta name="if:link 2" content="" />
+        <meta name="if:link 3" content="" />
+        <meta name="if:double link" content="" />
+        <meta name="if:show loading screen" content="" />
+<!---------------------------- END META OPTIONS ---------------------------->
+     
+     <!---- TOOLTIPS SCRIPT ---->
+        <link href="https://static.tumblr.com/obhfn4x/uggqk5yfl/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+        <script src="https://static.tumblr.com/obhfn4x/ITBqk5yf4/jquery.style-my-tooltips.js"></script>
+      <script>
+        (function($){
+          $(document).ready(function(){
+            $("[title]").style_my_tooltips();
+          });
+        })(jQuery);
+      </script> 
+        
+    <!---- TUMBLR CONTROLS SCRIPT ---->
+       <script src="https://static.tumblr.com/zgb0z1w/Pcbqh2qvt/tumblrcontrols.min.js"></script>
+
+        <script>$(document).ready(function() { tumblrControls("{color:header}", "{color:accent}", "{Name}"{block:Posts}{block:PermalinkPage}{block:Date}, "{PostID}", "true"{/block:Date}{/block:PermalinkPage}{/block:Posts} ); });</script>
+    
+
+    <!---- LOADING BAR SCRIPT ---->
+         <script type="text/javascript">
+            $(window).load(function () {
+                setTimeout(function() {
+                $("#loading").fadeOut("slow");
+                    }, 6600); 
+            });    
+	    </script>
+
+    <!---- NOT FOUND PAGE ---->
+        <script> 
+          $(document).ready(function() {
+            if ($('p:contains("The URL you requested could not be found.")'                ).html()) {
+            $(".wrapper_notfound").css( "visibility", "visible" ); 
+            $(".article_position").remove(); 
+            $('title').prepend( "Not Found | " ); } 
+          });
+        </script>
+        
+    <!---- RESPONSIVE VIDEOS ---->
+        <script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
+
+    <style>
+
+    /*** TOOLTIP ***/
+        #s-m-t-tooltip {         
+            max-width:300px;
+            z-index:10;
+            color:#000;      
+            background-color:rgba(255,255,255,0.9); 
+            font-size:12px;
+            line-height:16px;
+            font-family:Arial, sans-serif;
+            font-family:{text:notes tags and sidebar font}!important;
+            position:absolute;
+            text-align:center;
+            text-transform:lowercase;
+            border:#000 1px solid;
+            border-radius:4px;
+            padding:4px 11px 4px 11px;  
+        }
+          
+    /*** SELECTION ***/
+        ::selection {
+            background:{color:selection background};
+            color:{color:selection text};
+        }
+
+        ::-moz-selection {
+            background:{color:selection background};
+            color:{color:selection text};
+        }
+
+        ::-webkit-selection {
+            background:{color:selection background};
+            color:{color:selection text};
+        }
+
+/* ------- TUMBLR CONTROLS ------- */
+       .tmblr-iframe-compact .tmblr-iframe--unified-controls {
+            width:width:100% !important;
+        }
+
+        .iframe-controls--phone-mobile,
+        .tmblr-iframe--app-cta-button,
+        .tmblr-iframe:not(#new-tumblr-controls) {
+            visibility: hidden !important;
+            display: none !important;
+        }
+
+        .iframe-container,
+        iframe#new-tumblr-controls {
+            position: fixed;
+            top:5px;
+            right:0px;
+            height:65px;
+            width:calc(100% - 250px) !important;
+            background: {color:Controls Background};
+            z-index:15;
+        }
+
+        body {
+            margin:0;
+            background:{color:background} url({image:background});
+            {block:iffullbackground}
+            background-size:cover;
+            {/block:iffullbackground}
+            background-attachment:fixed;
+            font-family:Arial, sans-serif;
+            font-family:{text:posts font}!important;
+            word-wrap:break-word;
+        }
+        
+        ol {
+           margin:0;
+           padding:0;
+        }
+        
+        p {
+            margin-block-start: 0; 
+            margin-block-end: .4em; 
+        }
+        
+        .flex {
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .centered {
+            align-items:center;
+            justify-content:center;
+        }
+        
+        .align-center {
+            align-items:center;
+        }
+        
+        blockquote {
+            border-left:2px solid {color:blockquote border};
+            padding-left:10px;
+        }
+
+        main {
+            width:100%;
+            justify-content:space-around;
+            align-items:flex-start;
+        }
+        
+        
+        section {
+            width:calc(100% - 250px);
+            bottom:0;
+            right:0;
+            margin:auto; 
+            margin-top:85px;
+        }
+        
+        article {
+            font-size:15px;
+            background:{color:posts};
+            text-align:justify;
+            max-width:700px;
+            width:100%;
+            margin:40px auto 70px 300px; 
+        }
+        
+        article img {
+            max-width:100%;
+            display:block;
+            margin: auto;
+        }
+        
+        a {
+            text-decoration:none;
+            color:{color:links};
+        }
+        
+/* ------- HEADER ------- */ 
+        header {
+            top:0;
+            right:0;
+            width:100%;
+            width:calc(100% - 250);
+            height:65px;
+            background:{color:header};
+            position:fixed;
+            padding:0px 0px 0px 0px;
+            top: 0px;
+            z-index:5;
+            border-bottom:10px solid {color:accent};
+        }
+
+/* ------- NOT FOUND PAGE ------- */
+        .wrapper_notfound {
+            position: fixed;
+            visibility:hidden;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background:{color:background};
+            z-index:99;
+        }
+
+        .actual_notfound {
+            position: absolute;
+            left:50%;
+            top:50%;
+            font-family:Arial, sans-serif;
+            font-family:{text:title font}!important;
+            transform:translate(-50%, -50%);
+            width:calc(600px + 0.25vw);
+            font-size:calc(22px + 0.25vw);
+            line-height:150%;
+            text-align: center;
+        }
+
+        .actual_notfound a {
+            color:#444;
+            text-decoration: underline;
+        }
+
+/* ------------------------------- SIDEBAR ------------------------------ */
+        aside {
+            width:25%;
+            height: 100%;
+            position:fixed;
+            top:0;
+            left:0;
+            background:{color:sidebar};
+            max-width:250px;
+            margin-top:0px;
+            padding-bottom:40px;
+            z-index:9;
+        }
+        
+        .title {
+            color:{color:title};
+            margin-top:55px;
+            padding-left:20px;
+            padding-bottom:0;
+            font:{text:title font};
+            font-size:30px;
+            font-weight:600;
+            line-height: 80%;
+        }
+        
+        .subtitle {
+            color:{color:subtitle};
+            padding-left:20px;
+            font:{text:subtitle font};
+            padding-bottom:40px;
+            font-size:15px;
+            font-weight:600;
+            text-transform:uppercase;
+        }
+        
+        .registered {
+            color:{color:subtitle};
+            font-size:11px;
+            font-weight:normal;
+        }
+        
+        .links {
+            color:{color:sidebar links};
+            text-align:left;
+            line-height: 80%;
+        }
+        
+        .links a {
+            font-size:13px;
+            text-transform:uppercase;
+            color:{color:sidebar links};
+            padding-left:30px;
+        }
+        
+        .links a:hover {
+            color:{color:sidebar links hover};
+        }
+        
+        .links hr {
+            margin:20px 15px 10px 15px;
+            border-top:solid 1px;
+            border-right:none;
+            border-left:none;
+            border-bottom:none;
+        }
+        
+    /**** AVATAR ****/
+
+        aside img {
+            width:80px;
+            display:block;
+            margin:auto;
+            transform:translateY(30px);
+        }
+        
+    /**** AVATAR SHAPE OPTIONS ****/
+    
+        aside img.square {
+            border-radius:3.2px;
+        }
+        
+        aside img.circle {
+            border-radius:100%;
+        }
+
+
+/* ------- POSTS ------- */
+
+        #photosetwrap, #photowrap, #panowrap, #video {
+            padding:15px 0;
+        }
+
+    /**** TEXT POSTS ****/
+        .textpost h1 h2 h3 {
+            padding:0;
+            margin:0;
+            font-weight:bold;
+        }
+        
+        .textpost h1 {font-size:21px;}
+        .textpost h2 {font-size:19px;}
+        .textpost h3 {font-size:17px;}
+
+        #headline {
+            font-size:21px;
+            font-weight:bold;
+            margin: 0px;
+            padding:15px 20px 15px 20px;
+            letter-spacing:1px;
+            background:rgba({RGBcolor:posts accent},0.5);
+        }
+        
+        .textposts li {
+            list-style-type:disc;
+            margin-left:0;
+            padding-left:20px;
+        }
+       
+        .read_more_container {
+            box-sizing:border-box;
+            margin:25px 0 15px 0;
+            text-align:center; 
+        }
+
+        a.read_more {
+            font-weight:bold;
+            color:{color:accent}; 
+            padding:5px 10px;
+            border:2px solid {color:accent};
+            border-radius:5px;
+            background:transparent;
+        }
+        
+        a.read_more:hover{
+           background:{color:accent};
+           color:{color:posts};
+       }
+        
+    /**** photoposts ****/
+        .photopost img {
+            width:100%;
+        }
+                
+    /**** QUOTE POST ****/
+        #quotewrap {
+            padding:20px;
+        }
+        
+        .quote {
+            width: 100%;
+            font-weight:bold;
+            font-family:Goudy Old Style,Garamond,
+            Big Caslon,Times New Roman,serif;
+        }
+        
+        .quotetext_short {font-size:25px;} 
+        .quotetext_medium {font-size:23px;} 
+        .quotetext_long {font-size:19px;}
+        
+        .source {
+            text-align: right;
+            font-family:Arial, sans-serif;
+            font-family:{text:posts font} !important;
+            font-size:15px;
+            font-weight:normal;
+        }
+        
+        #sqwrap {
+            padding-right:20px;
+            padding-top:15px;
+        }
+        
+                
+    /**** LINK POST ****/
+        .linkbox {
+            box-sizing:border-box;
+            width:100%;
+            display:inline-block;
+            background:rgba({RGBcolor:posts accent},0.5);
+            padding-left:25px;
+        }
+        
+        a.link{
+            color:rgba({RGBcolor:text}, 0.8);
+            padding:1em; /* padding */
+            text-decoration:none;
+        } 
+        
+        .link-host{
+        font-size:13px; 
+        }
+       
+        .link-title {
+            font-size:1.8em; 
+            font-family:Arial, sans-serif;
+            font-family:{text:notes tags and sidebar font}!imortant;
+        }
+     
+        .link-desc {
+            font-size:15px;
+            font-style:italic;
+            padding-top:5px;
+            color:rgba({RGBcolor:text}, 0.6);
+        }
+
+        .link-title, .link-host, .link-desc, .thumbnail {
+        cursor:pointer; 
+        }
+
+        .thumbnail img {
+            all:unset;
+            width:calc(100% + 2em);
+            display:block;
+            margin:.4em 0;
+            margin-left:-1em;
+        }
+        
+    /**** CHAT POSTS ****/
+        .chat {
+            margin:0;
+            padding:0;
+        }
+        .chat li {
+            list-style:none;
+            padding:10px;
+        }
+        
+        .chat li:nth-of-type(odd) {
+            background:{color:posts};
+            color:{color:text};   
+        }
+        
+        .chat li:nth-of-type(even) {
+            background:{color:text};
+            color:{color:posts};
+        }
+        
+    /**** ANSWER POSTS ****/
+        .question {
+            width:95%;
+            position:relative;
+            display:flex;
+            padding:15px;
+            margin:0;
+        }
+        
+        .ask {
+            width:calc(100% - 90px);
+            background:rgba({RGBcolor:posts accent},0.5);
+            padding:15px;
+            position:relative;
+            border-radius:3px;
+        }
+
+        .ask::after {
+            content:' ';
+            display:block;
+            border:13px solid transparent;
+            border-left-color:rgba({RGBcolor:posts accent},0.5);
+            position:absolute;
+            right:-26px;
+            top:12px;
+        }
+        
+        .asker-avatar{
+            width:44px;
+            height:44px;
+            object-fit:cover;
+            position:absolute;
+            right:0;
+            margin-right:11px;
+            border-radius:100%;
+        }
+        
+        .asker b,
+        .asker b a{
+            color:{color:links};
+        }
+
+        .replies{
+            margin:20px;
+        }
+
+    /**** AUDIO POSTS ****/
+            #audiowrap {
+                padding-top:15px;
+            }
+    
+        .playbutton {
+            position:relative;
+            margin-top:45px;
+            margin-left:44px;
+            z-index:3;
+            width:33px;
+            height:30px;
+            overflow:hidden;
+            border-radius:100px;
+        }
+
+        .albumart img {
+            position:relative;
+            margin-top:-75px;
+            margin-left:0px
+            height:120px;
+            width:120px;
+            display:inline-block;
+            z-index:2;
+        }    
+
+        .trackinfo {
+            margin-bottom:10px;
+            background:rgba({RGBcolor:accent},0.95);
+            opacity:0.85;
+            color:{color:posts};
+            top:-4px;
+            position:relative;
+            margin-left:120px;
+            height:120px;
+            margin-top:-120px;
+        }
+
+        .trackname {
+            position:relative;
+            padding-left:40px;
+            padding-top:30px;
+            text-align:left;
+            font-size:15px;
+            text-transform:uppercase;
+            font-weight: bold;
+            letter-spacing:2px;
+        }  
+
+        .artist, .album {
+            padding-top:5px;
+            padding-left:40px;
+            text-align:left;
+            font-size:15px;
+            text-transform:uppercase;
+            font-weight: bold;
+            letter-spacing:2px;
+        }
+        
+/* ------- REBLOGS ------- */
+        .reblog-header {
+            margin:15px 0 5px 0;
+        }
+        
+        .reblog-header a {
+            font-weight:bold;
+            padding:0 20px;
+        }
+
+        .reblog-content {
+            border-bottom: 1px solid rgba({RGBcolor:accent},0.09);
+        } 
+        
+        .reblog-content:last-of-type {
+            border:none;
+        } 
+        
+        .reblog-content {
+            margin:0;
+            padding:0 25px 10px 35px;
+        }
+
+        .og {
+            margin:0;
+            padding:20px;
+        }
+
+/* ------- CODE BLOCKS ------- */ 
+        pre {
+            display:block;
+            box-sizing:border-box;
+            background:rgba({RGBcolor:text},0.95);
+            color:{color:posts};
+            font-family:Lucida Console, Consolas, Menlo, monospace;
+            max-height:141px;
+            font-size:12px;
+            line-height:18px;
+            padding:15px;
+            margin:10px 20px 20px 10px;
+            width:95%;
+            max-width:660px;
+            overflow:auto;
+        }
+
+/* ------- POST INFO ------- */
+
+    /**** DATE & TIME****/
+        .time {
+            margin:0;
+            padding:20px 20px 10px 20px;
+            font-size:13px;
+            font-weight:bold;
+            text-transform:uppercase; 
+            border-bottom:1px solid rgba({RGBcolor:accent},0.4); 
+        }
+
+        .filing {
+            padding:15px;
+            font-size:13px;
+            text-transform:uppercase; 
+            border-top:1px solid rgba({RGBcolor:accent},0.4); 
+        }
+        
+    /**** LIKE AND REBLOG ****/
+        .buttonbox {
+            margin:0;
+            margin-left:calc(700px - 77px);
+            display:block;
+            position:absolute;
+            background:{color:posts};
+            border-top:1px solid rgba({RGBcolor:accent},0.4);
+        }
+        
+        .smileybox {
+            box-sizing:border-box;
+            display:inline-block;
+            padding:7px 10px;
+        }
+        
+        .rbbox {
+            box-sizing:border-box;
+            display:inline-block;
+            font-size:14px;
+            padding:9px 12px;
+            border-right:1px solid rgba({RGBcolor:accent}, 0.4);
+        }
+        
+        .smiley {
+            position:relative;
+            display:inline-block;
+        }
+        
+        .like_button {
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            width:100%;
+            height:100%;
+            opacity:0;
+            z-index:15;
+        }
+        
+        .like_button iframe {
+            width:100% !important;
+            height:100% !important;
+        }
+        
+        .smiley .like .liked .far {
+           opacity:1;
+        }
+        .smiley .like .liked + .far {
+           color:#808080;
+        }
+        
+        .smiley .like .liked + .far:before{
+          content:"\f118";
+        }
+        
+        .rebloginfo {
+            float:right;
+            text-align:right;
+            text-transform:uppercase; 
+        }
+        
+        .split {
+            color:rgba({RGBcolor:tags},1);
+            font-weight:normal;
+        }
+        
+        .rebloginfo a {
+            color:rgba({RGBcolor:tags},0.8);
+            font-size:12px;
+            font-weight:bold;
+        }
+        
+        .rebloginfo a:hover {
+            color:{color:tags hover};
+            border-bottom:1px solid {color:tags hover}; 
+        }
+        
+    /**** TAGS ****/
+         .tagswrap {
+            position:relative;
+            padding:10px 5px 5px 5px;
+            text-align:left;
+        }
+        
+        #filed {
+            color:rgba({RGBcolor:tags},1);
+            font-weight:bold;
+        }
+        
+        #tags li {
+            list-style-type:none;
+            display:inline-block;
+        }
+        
+        #tags li:after { 
+            color:rgba({RGBcolor:tags},0.8);
+            content:',';
+        }  
+
+        #tags li:last-child:after {
+            content: '';
+        } 
+  
+        #tags a {
+            color:rgba({RGBcolor:tags},0.8);
+        }
+        
+        #tags a:hover {
+            color:{color:tags hover};
+            border-bottom:1px solid {color:tags hover}; 
+        }
+
+    /**** POST NOTES****/
+        .notebox {
+            background:{color:posts};
+            text-align:justify;
+            width:100%;
+            max-width:700px;
+            margin:150px auto 50px 300px; 
+            padding:0;
+        }
+        
+        .notey {
+            padding:25px 20px;
+            text-align: left;
+        }
+        
+        ol.notes img {
+            display:none;
+        }
+
+        .notey ol {
+            
+            padding:0;
+            list-style-type: none;
+        }
+
+        .notey ol li {
+            padding:0;
+            font-size:13px;
+            line-height:27px;
+        }
+        
+        .notey a {
+            margin-right:7px;
+        }
+        
+        .notey ol li a {
+            font-weight:bold;
+        }
+
+        .notey ol li blockquote {
+            line-height:16px;
+            font-weight:normal;
+        }
+
+        .notes .action {
+            color:rgba({RGBcolor:text},0.8);
+        }
+        
+        .more_notes_link_container {
+            margin-top:30px;
+        }
+
+        .more_notes_link_container a {
+            color:{color:accent}; 
+            padding: 7px 14px;
+            border:2px solid {color:accent};
+            border-radius:5px;
+            background:transparent;
+        }
+        
+         .more_notes_link_container a:hover{
+           background:{color:accent};
+           color:{color:posts};
+       }
+       
+       .note.reblog::before {
+           font-family:'honeybee';
+            font-size:13px;
+            display: inline-block;
+       }
+
+        .note.like::before,
+        .note.reply::before {
+            font-family:'Font Awesome 5 Free';
+            font-size:14px;
+            display: inline-block;
+        }
+
+        .note.reblog::before {
+            content:"\ebc2";
+            display: inline;
+            margin-right:15px;
+        }
+
+        .note.like::before {
+            content: "\f118";
+            display: inline;
+            margin-right:15px;
+        }
+
+        .note.reply::before {
+            display: inline-block;
+            text-align:center;
+            content: "\f075";
+            margin-right: 15px;
+        }
+            
+        .inactive:hover:after {
+            content:'deactivated';
+        }
+        
+    /**** PAGINATION ****/
+        .pagination {
+            width:90%;
+            text-align:center;
+            margin:40px auto 100px auto;
+        }
+        
+        .currentpage {
+            width:10px;
+            height:10px;
+            padding:4px 10px;
+            margin:2px;
+            background:{color:text};
+            color:{color:posts};
+        }
+ 
+        .otherpage {
+            background:transparent;
+            width: 10px;
+            height: 10px;
+            padding: 4px 10px;
+            margin: 2px;
+        }
+ 
+        .otherpage:hover {
+            background:rgba({RGBcolor:text},0.5);
+            color:{color:posts};
+        }
+ 
+        .prevpage, .nextpage {
+            background: transparent;
+            width: 10px;
+            height: 10px;
+            padding: 3px 5px;
+            font-size: 14px;
+        }
+        
+        .prevpage a:hover, 
+        .nextpage a:hover {
+            background:rgba({RGBcolor:text},0.5);
+            padding:4px 10px;
+            color:{color:posts};
+        }
+        
+/* ------- FOOTER ------- */ 
+        #credz {
+            text-align:right;
+            padding-right:21px;
+            font-size:40px;
+        }
+        
+        footer {
+            width:calc(100% - 250);
+            padding-top:40px;
+            margin:150px 0 0 0;
+            text-align:center;
+            background-color:{color:background};
+            border-top:{color:accent} 7px solid;
+        }
+     
+/* ------- LOADING BAR ------- */
+        #loading {
+            position: fixed;
+            left:0px;
+            top:0px;
+            width:100%; 
+            height:100%;  
+            z-index:9999;
+            background:url('https://cdn.discordapp.com/attachments/772985599807455232/778974828728156171/ajax-loader_1.gif') 50% 50% no-repeat #fff;
+            background-size:350px;
+        }
+
+/* ------- MEDIA QUERY ------- */
+        @media only screen and (max-width: 1100px) {
+            aside {
+                display:none;
+                position:relative;
+                width:100%;
+                left:auto;
+                max-width:700px;
+                margin:50px auto;
+            }
+            
+            section {
+                width:100%;
+            }
+            
+            article {
+                margin:100px auto; 
+            }
+            
+            .notebox {
+                margin:100px auto 70px auto; 
+            }
+            
+            footer {
+                width:100%;
+                margin:150px 0 0 0;
+            }
+            
+            .tmblr-iframe-compact .tmblr-iframe--unified-controls {
+                width:width:100% !important;
+            }
+    
+            .iframe-controls--phone-mobile,
+            .tmblr-iframe--app-cta-button,
+            .tmblr-iframe:not(#new-tumblr-controls) {
+                visibility: hidden !important;
+                display: none !important;
+            }
+    
+            .iframe-container,
+            iframe#new-tumblr-controls {
+                position: fixed;
+                top:5px;
+                right:0px;
+                height:65px;
+                width:100% !important;
+                background: {color:Controls Background};
+                z-index:15;
+            }
+        }
+        
+        @media only screen and (max-width: 700px) {
+            aside {
+                display:none;
+                position:relative;
+                width:100%;
+                left:auto;
+                max-width:700px;
+                margin:50px auto;
+            }
+            
+            section {
+                margin-top:0;
+                width:100%;
+            }
+            
+            article {
+                margin:80px auto 50px auto; 
+            }
+            
+            .notebox {
+                margin:100px auto 50px auto; 
+            }
+            
+            footer {
+                width:100%;
+                margin:150px 0 0 0;
+            }
+            
+            .buttonbox {
+                margin:0;
+                right:0;
+            }
+            
+            .trackname, .artist, .album {
+                padding-left:20px;
+            }
+            
+            .asker-avatar {
+                margin-right:21px;
+            }
+            
+            .ask {
+                width:calc(100% - 104px);
+            }
+            
+            .time {
+                padding:15px 10px 10px 10px;
+            }
+            
+            .tmblr-iframe-compact .tmblr-iframe--unified-controls {
+                width:width:100% !important;
+            }
+    
+            .iframe-controls--phone-mobile,
+            .tmblr-iframe--app-cta-button,
+            .tmblr-iframe:not(#new-tumblr-controls) {
+                visibility: hidden !important;
+                display: none !important;
+            }
+    
+            .iframe-container,
+            iframe#new-tumblr-controls {
+                position: fixed;
+                top:5px;
+                right:0px;
+                height:65px;
+                width:100% !important;
+                background: {color:Controls Background};
+                z-index:15;
+            }
+        }
+        
+        .audio_player iframe {
+            width:calc(100% - 0px);
+            background:#f2f2f2;
+            height:50px;
+         
+        }
+        
+        iframe {
+            max-width:100%;
+        }     
+
+       {CustomCSS}
+    </style>    
+    </head>
+    
+    
+    <body>
+        
+    <!------- NOT FOUND PAGE ------->
+    	<div class="wrapper_notfound">
+        	<div class="actual_notfound">
+           	 <h1>Not Found</h1>
+            	The page you requested could not be found. 
+            	<br>Please go <a href="/">here</a> to refresh the page.
+        	</div> 
+    	</div>
+    
+    <!-- loading screen -->
+    {block:IndexPage}
+    {block:IfShowLoadingScreen}<div id="loading"></div>
+    {/block:IfShowLoadingScreen}
+    {/block:IndexPage}
+     
+    <!-- main container -->    
+        <main class="flex">
+        
+    <!------- HEADER AND CONTROLS ------->
+        <header>
+            <div class="iframe-container"><iframe id="new-tumblr-controls" src="" width="1458" height="54" frameborder="0" scrolling="no" name="unified-controls" class="tmblr-iframe tmblr-iframe--unified-controls tmblr-iframe--loaded iframe-controls--desktop"></iframe></div>
+        </header>
+        
+    <!------- SIDEBAR ------->
+        <aside>
+        <div class="sideheader">
+        {block:IfShowAvatar}
+            <img src="{portraiturl-128}" class="{AvatarShape}">
+        {/block:IfShowAvatar}
+            </div>
+            
+            <div class="title">
+                {text:title}
+            </div>
+            <div class="subtitle">
+                {text:subtitle}<sup class="registered">®</sup>
+            </div>
+            
+            <div class="links">
+            <a href="/">{lang:Home}
+            {block:IfDoubleLink}
+                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {text:double home}
+            {/block:IfDoubleLink}
+            </a>
+            {block:askenabled}<hr><br>
+            <a href="/ask">{text:ask title}
+            {block:IfDoubleLink}
+                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {text:double ask}
+            {/block:IfDoubleLink}
+            </a>{/block:askenabled}
+            {block:IfLink1}<hr><br>
+            <a href="/{text:link 1 url}">{text:link 1 title}
+            {block:IfDoubleLink}
+                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {text:double link 1 title}
+            {/block:IfDoubleLink}
+            {/block:IfLink1}</a>
+            {block:IfLink2}<hr><br>
+            <a href="/{text:link 2 url}">{text:link 2 title}
+            {block:IfDoubleLink}
+                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {text:double link 2 title}
+            {/block:IfDoubleLink}
+            {/block:IfLink2}</a>
+            {block:IfLink3}<hr><br>
+            <a href="/{text:link 3 url}">{text:link 3 title}
+            {block:IfDoubleLink}
+                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {text:double link 3 title}
+            {/block:IfDoubleLink}
+            {/block:IfLink3}</a>
+            {block:submissionsenabled}<hr><br>
+            <a href="/submit">Submit</a>
+            {block:IfDoubleLink}
+                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {text:double submit}
+            {/block:IfDoubleLink}
+            {/block:submissionsenabled}
+            <hr><br>
+            <a href="/archive">Archive
+            {block:IfDoubleLink}
+                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {text:double archive}
+            {/block:IfDoubleLink}
+            </div>
+        </aside>
+      
+        <section>
+        
+<!--------------------------------- POSTS --------------------------------->
+        
+        {block:Posts}
+        <!--{block:NoRebloggedFrom}
+        {block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}
+        {/block:NoRebloggedFrom} -->
+        {block:ContentSource}<!-- {SourceURL}
+        {block:SourceLogo}<img src="{BlackLogoURL}"
+        width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+        {/block:SourceLogo}
+        {block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo} -->
+        {/block:ContentSource}
+
+        <article class="{PostType}post posts">
+        
+    <!---- POST INFO ---->
+        <div class="time flex align-center">
+            <a href="/day/{Year}/{MonthNumberWithZero}/{dayofmonthwithzero}">{block:Date}{Month} {DayOfMonthWithZero} {Year}, {24HourWithZero}:{Minutes} {AmPm}{/block:Date}</a>
+        </div>
+                    
+    <!------- TEXT POSTS ------->            
+        {block:Text}
+        {block:Title}
+            <h1 id="headline">{Title}</h1>
+        {/block:Title}
+        {block:Notreblog}
+            <div class="og">{Body}</div>
+        {/block:Notreblog}
+        {block:Rebloggedfrom}
+            <div class="reblog-list">
+            {block:Reblogs}
+            <div class="reblogs">
+                <div class="reblog-header">
+                    {block:IsActive}
+                    <a href="{permalink}">{username}</a>
+                    {/block:IsActive}
+                    {block:IsDeactivated}
+                    <a href="{permalink}" class="inactive">{username}</a>
+                    {/block:Isdeactivated}
+                </div>
+                <div class="reblog-content">{Body}</div>
+            {/block:Reblogs}
+            </div>
+            </div>
+            {/block:RebloggedFrom}
+            {/block:Text}
+            
+    <!-- PHOTO POSTS -->
+            {block:Photo}<div id="photowrap">
+            <img src="{PhotoURL-highres}" alt="{PhotoAlt}" class="photos">
+            {/block:Photo}</div>
+            
+            <!-- photoset --> 
+            {block:Photoset}
+                <div id="photosetwrap">{Photoset}</div>
+            {/block:Photoset}
+            
+    <!------- PANORAMA ------->
+        {block:Panorama}<div id="panowrap">
+            <img src="{photourl-panorama}" alt="{photoalt}">
+        </div>{/block:Panorama}
+            
+    <!------- QUOTE POSTS ------->
+        {block:Quote}<div id="quotewrap">
+            <div class="quote">
+            <div class="quotetext_{Length}">
+                “{Quote}”
+            </div>
+            {block:Source}<div id="sqwrap">
+            <div class="source">- {Source}</div>{/block:Source}</div>                    
+	</div>
+        </div>{/block:Quote}
+            
+            
+    <!----- CHAT POSTS ----->
+       {block:Chat}
+        <ul class="chat">
+            {block:Lines}
+            <li>{block:Label}{Label}{/block:Label} {Line}</li>
+            {/block:Lines}
+            </ul>
+        {/block:Chat}
+            
+    <!------- LINK POSTS ------->
+            {block:Link}<div class="linkbox">
+            <div class="post-link">
+                <a href="{URL}" class="link" {Target}>
+                    <div class="link-host">
+                        {block:Host}{Host}{/block:Host}
+                    </div>
+                    {block:Thumbnail}
+                    <div class="thumbnail"><img src="{Thumbnail}"/></div>
+                    {/block:Thumbnail}
+                    <div class="link-title">
+                    <span class="fas fa-link" style="font-size:17px">
+                    </span> {Name}
+                    </div>
+                    <div class="link-desc">
+                    {block:Excerpt} 
+                    {Excerpt}
+                    {/block:Excerpt}
+                    </div>
+                </a> 
+            </div>
+            {block:Description}
+            {Description}
+            {/block:Description}
+            {/block:Link}</div>
+            <!-- link end here -->
+            
+    <!------- VIDEO POSTS ------->
+            {block:Video}<div id="video">
+               {Video-700}
+            </div>{/block:Video}
+      
+    <!------- AUDIO POSTS (¡FIX) ------->
+        {block:audio}<div id="audiowrap">
+        {block:audioplayer}
+            <div class="playbutton">{audioplayergrey}</div>
+            {block:albumart}<div class="albumart">
+                <img src="{AlbumArtURL}">
+            </div>{/block:albumart}
+        <div class="trackinfo">
+            <div class="trackname">{block:trackname}
+                {trackname}
+            {/block:trackname}</div>
+            <div class="artist">{block:artist}
+                BY {artist}
+            {/block:artist}</div>
+            <div class="album">{block:album}
+                {album}
+            </div>{/block:album}
+        </div>
+        {/block:audioplayer}
+        </div>{/block:audio}
+            
+    <!------- ANSWER POSTS ------->
+        {block:Answer}
+            <div class="question">
+                <img class="asker-avatar" src="{AskerPortraitURL-96}" alt="">
+                <div class="ask">
+                    <div class="asker"><b>{Asker}:</b> {Question}</div>
+                </div>
+            </div>
+            <div class="replies">{Replies}</div>
+        {/block:Answer}
+            
+    <!------- CAPTIONS ------->
+        {block:Caption}<div class="capframe">
+            {block:Notreblog}
+                <div class="og">{Caption}</div>
+            {/block:Notreblog}
+            {block:RebloggedFrom}
+                <div class="reblog-list">
+                {block:Reblogs}
+                <div class="reblogs">
+                    <div class="reblog-header">
+                        {block:IsActive}
+                        <a href="{permalink}">{username}</a>
+                        {/block:IsActive}
+                        {block:IsDeactivated}
+                        <a href="{permalink}" class="inactive">{username}</a>
+                        {/block:Isdeactivated}
+                    </div>
+                 <div class="reblog-content">{Body}</div>
+            {/block:Reblogs}
+            </div></div>
+            {/block:RebloggedFrom}
+            </div>{/block:Caption}
+
+    <!------- POST INFO #2 ------->
+        {block:Date}
+        <div class="filing">
+        <a href="{permalink}" title="view post">
+        <span class="far fa-folder-open" style="font-size:15px"></span>&nbsp;&nbsp;</a>
+        {block:NoteCount}
+            <a href="{permalink}">{NoteCountWithLabel}</a>
+        {/block:NoteCount}
+        
+        {block:permalinkpage}{block:RebloggedFrom}<div class="rebloginfo">
+            <a href="{ReblogParentURL}" title="{ReblogParentName}">VIA</a> 
+            <span class="split">&nbsp; + &nbsp;</span>
+            <a href="{ReblogRootURL}" title="{ReblogRootName}">SOURCE</a>
+        </div>{/block:RebloggedFrom}{/block:PermalinkPage}
+        
+        {block:HasTags}<div class="tagswrap">
+            <ol id="tags">
+            <span id="filed">Filed Under:</span>&nbsp;&nbsp; 
+            {block:Tags}<li><a href="{TagURL}">{Tag}</a></li>
+            &nbsp;&nbsp;{/block:Tags}
+        {/block:HasTags}</ol></div>
+        </div>
+
+             <div class="buttonbox flex">
+                <div class="rbbox">
+                    <a href="{ReblogURL}" target="_blank" ><span class="th th-reblog"></span></a> 
+                </div>
+                <div class="smileybox">
+                    <div class="smiley">
+                      <a href="#" class="like">{LikeButton}  
+                      <span class="far fa-meh" style="font-size:16px">
+                      </span></a>
+                    </div>
+                </div>
+            </div>{/block:Date}
+
+            </article> 
+            {/block:Posts}
+            
+    <!------- POST NOTE LIST ------->
+            {block:PostNotes}<div class="notebox">
+            <div class="notey">
+            {PostNotes}</div>
+            </div>{/block:PostNotes}
+            </section> 
+<!------------------------------- END POSTS ------------------------------->
+            
+     <!------- PAGINATION ------->
+            {block:pagination}
+            <div class="pagination">
+                {block:previouspage}
+                <span class="prevpage">
+                    <a href="{previouspage}">« Prev</a>
+                </span>
+                {/block:previouspage}{block:JumpPagination length="6"}
+                {block:CurrentPage}
+                <span class="currentpage">{PageNumber}</span>
+                {/block:CurrentPage}
+                {block:JumpPage}
+                    <a class="otherpage" href="{URL}">{PageNumber}</a>
+                {/block:JumpPage}{/block:JumpPagination}
+                {block:nextpage}
+                <span class="nextpage">
+                    <a href="{nextpage}">Next »</a></span>
+                {/block:nextpage}
+            </div>{/block:pagination}
+
+        </main> 
+<!------------------------------ END CONTAINER ----------------------------->
+
+        <footer>
+            ©2020 BLI Industries, Inc
+            <div id="credz">
+                <a href="https://gatoscodes.tumblr.com" 
+                title="made by @gatoscodes"><span class="fas fa-barcode">
+            </span></a></div>
+        </footer>
+
+        
+    <script>
+    // ------- VIDEO RESIZING -------
+        function flexFrame() {
+            $(".caption").each(function() {
+                $(this).find("iframe").wrap("<div class='capframe'></div>"); 
+        flexibleFrames($(".capframe"));
+        });
+            flexibleFrames($(".video"));
+        }
+        $(document).ready(flexFrame);
+        
+        $(document).ready(function() {
+            flexibleFrames($(".video"));  
+        });
+    </script>
+</body>
+</html>
