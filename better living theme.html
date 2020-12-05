@@ -69,7 +69,7 @@
     <!-- TEXT OPTIONS -->
         <meta name="text:title" content="Better Living">
         <meta name="text:subtitle" content="Industries">
-        <meta name="text:title font" content="'Roboto', sans-serif" />
+        <meta name="text:title font" content="" />
         <meta name="text:subtitle font" content="'Roboto', sans-serif" />
         <meta name="text:posts font" content="'Roboto', sans-serif" />
         <meta name="text:notes tags and sidebar font " content="'Source Sans Pro', sans-serif" />
@@ -148,7 +148,7 @@
             font-size:12px;
             line-height:16px;
             font-family:Arial, sans-serif;
-            font-family:{text:notes tags and sidebar font}!important;
+            font-family:'Source Sans Pro', sans-serif!important;/*edit:tooltip font*/
             position:absolute;
             text-align:center;
             text-transform:lowercase;
@@ -203,8 +203,6 @@
             background-size:cover;
             {/block:iffullbackground}
             background-attachment:fixed;
-            font-family:Arial, sans-serif;
-            font-family:{text:posts font}!important;
             word-wrap:break-word;
         }
         
@@ -253,6 +251,8 @@
         
         article {
             font-size:15px;
+	    font-family:Arial, sans-serif;
+            font-family:'Roboto', sans-serif;/*edit: posts font*/
             background:{color:posts};
             text-align:justify;
             max-width:700px;
@@ -303,7 +303,7 @@
             left:50%;
             top:50%;
             font-family:Arial, sans-serif;
-            font-family:{text:title font}!important;
+            font-family:'Roboto', sans-serif!important; /*edit: not found page font*/
             transform:translate(-50%, -50%);
             width:calc(600px + 0.25vw);
             font-size:calc(22px + 0.25vw);
@@ -335,7 +335,7 @@
             margin-top:55px;
             padding-left:20px;
             padding-bottom:0;
-            font:{text:title font};
+            font:'Roboto', sans-serif;/*edit: title font*/
             font-size:30px;
             font-weight:600;
             line-height: 80%;
@@ -344,7 +344,7 @@
         .subtitle {
             color:{color:subtitle};
             padding-left:20px;
-            font:{text:subtitle font};
+            font:'Roboto', sans-serif;/*edit: subtitle*/
             padding-bottom:40px;
             font-size:15px;
             font-weight:600;
@@ -358,6 +358,8 @@
         }
         
         .links {
+	    font-family:Arial, sans-serif;
+            font-family:'Source Sans Pro', sans-serif!imortant;/*edit: sidebar links font*/
             color:{color:sidebar links};
             text-align:left;
             line-height: 80%;
@@ -468,7 +470,7 @@
             width: 100%;
             font-weight:bold;
             font-family:Goudy Old Style,Garamond,
-            Big Caslon,Times New Roman,serif;
+            Big Caslon,Times New Roman,serif;/*edit:quotes font*/
         }
         
         .quotetext_short {font-size:25px;} 
@@ -478,7 +480,7 @@
         .source {
             text-align: right;
             font-family:Arial, sans-serif;
-            font-family:{text:posts font} !important;
+            font-family:'Roboto', sans-serif!important;/*edit:change to match posts font*/
             font-size:15px;
             font-weight:normal;
         }
@@ -496,6 +498,8 @@
             display:inline-block;
             background:rgba({RGBcolor:posts accent},0.5);
             padding-left:25px;
+            font-family:Arial, sans-serif;
+            font-family:'Roboto', sans-serif!imortant;/*edit: link posts font*/
         }
         
         a.link{
@@ -510,8 +514,6 @@
        
         .link-title {
             font-size:1.8em; 
-            font-family:Arial, sans-serif;
-            font-family:{text:notes tags and sidebar font}!imortant;
         }
      
         .link-desc {
@@ -692,7 +694,7 @@
             box-sizing:border-box;
             background:rgba({RGBcolor:text},0.95);
             color:{color:posts};
-            font-family:Lucida Console, Consolas, Menlo, monospace;
+            font-family:Lucida Console, Consolas, Menlo, monospace;/*edit:codeblocks font*/
             max-height:141px;
             font-size:12px;
             line-height:18px;
@@ -712,6 +714,8 @@
             font-size:13px;
             font-weight:bold;
             text-transform:uppercase; 
+			font-family:Arial, sans-serif;
+            font-family:'Source Sans Pro', sans-serif!imortant;/*edit:notes and tags font*/
             border-bottom:1px solid rgba({RGBcolor:accent},0.4); 
         }
 
@@ -719,6 +723,8 @@
             padding:15px;
             font-size:13px;
             text-transform:uppercase; 
+			font-family:Arial, sans-serif;
+            font-family:'Source Sans Pro', sans-serif!imortant;/*edit:notes and tags font*/
             border-top:1px solid rgba({RGBcolor:accent},0.4); 
         }
         
@@ -803,6 +809,8 @@
         
     /**** TAGS ****/
          .tagswrap {
+			font-family:Arial, sans-serif;
+            font-family:'Source Sans Pro', sans-serif!imortant;/*edit:notes and tags font*/
             position:relative;
             padding:10px 5px 5px 5px;
             text-align:left;
