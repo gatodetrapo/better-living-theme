@@ -6,11 +6,14 @@
                         
                 base code by egg.design. full credits on post. 
                     
-                    ✘ don’t steal or claim as your own. 
-                    ✘ don’t move or remove credit.
+                    ✘  don’t steal or claim as your own. 
+                    ✘  don’t move or remove credit.
                 
-                ✔ editing/customizing for personal use is fine
-                    ↳ basic knowledge of html and css is required to do so
+            ✔  editing/customizing for personal use is fine
+                 ↳ view customization guide to change fonts and icons
+                       
+    ☛ basic knowledge of html and css is required for further customization 
+                     
 
 -->
 
@@ -36,8 +39,7 @@
         <!-- ICON FONTS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
         <link href="//solrainha.github.io/honeybee/honeybee.css" rel="stylesheet">
-         
-         <!-- this line ensures that your theme will be mobile friendly -->
+
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         
          <!-- jQuery -->
@@ -144,7 +146,7 @@
             font-size:12px;
             line-height:16px;
             font-family:Arial, sans-serif;
-            font-family:'Source Sans Pro', sans-serif!important;/*edit:tooltip font*/
+            font-family:'Source Sans Pro', sans-serif!important; /*GUIDE: tooltip font*/
             position:absolute;
             text-align:center;
             text-transform:lowercase;
@@ -199,6 +201,8 @@
             background-size:cover;
             {/block:iffullbackground}
             background-attachment:fixed;
+            font-family:Arial, sans-serif;
+            font-family:'Roboto', sans-serif!important; /*GUIDE: posts font */
             word-wrap:break-word;
         }
         
@@ -247,8 +251,6 @@
         
         article {
             font-size:15px;
-	    font-family:Arial, sans-serif;
-            font-family:'Roboto', sans-serif;/*edit: posts font*/
             background:{color:posts};
             text-align:justify;
             max-width:700px;
@@ -278,7 +280,7 @@
             position:fixed;
             padding:0px 0px 0px 0px;
             top: 0px;
-            z-index:5;
+            z-index:7;
             border-bottom:10px solid {color:accent};
         }
 
@@ -299,7 +301,7 @@
             left:50%;
             top:50%;
             font-family:Arial, sans-serif;
-            font-family:'Roboto', sans-serif!important; /*edit: not found page font*/
+            font-family:'Roboto', sans-serif!important; /*GUIDE: not found page font*/
             transform:translate(-50%, -50%);
             width:calc(600px + 0.25vw);
             font-size:calc(22px + 0.25vw);
@@ -331,7 +333,7 @@
             margin-top:55px;
             padding-left:20px;
             padding-bottom:0;
-            font-family:'Roboto', sans-serif;/*edit: title font*/
+            font-family:'Roboto', sans-serif!important; /*GUIDE: title font*/
             font-size:30px;
             font-weight:600;
             line-height: 80%;
@@ -340,7 +342,7 @@
         .subtitle {
             color:{color:subtitle};
             padding-left:20px;
-            font:'Roboto', sans-serif;/*edit: subtitle*/
+            font-family:'Roboto', sans-serif!important; /*GUIDE: subtitle font*/
             padding-bottom:40px;
             font-size:15px;
             font-weight:600;
@@ -354,8 +356,6 @@
         }
         
         .links {
-	    font-family:Arial, sans-serif;
-            font-family:'Source Sans Pro', sans-serif!imortant;/*edit: sidebar links font*/
             color:{color:sidebar links};
             text-align:left;
             line-height: 80%;
@@ -398,7 +398,6 @@
         aside img.circle {
             border-radius:100%;
         }
-
 
 /* ------- POSTS ------- */
 
@@ -466,7 +465,7 @@
             width: 100%;
             font-weight:bold;
             font-family:Goudy Old Style,Garamond,
-            Big Caslon,Times New Roman,serif;/*edit:quotes font*/
+            Big Caslon,Times New Roman,serif; /*GUIDE: quote posts font*/
         }
         
         .quotetext_short {font-size:25px;} 
@@ -476,7 +475,7 @@
         .source {
             text-align: right;
             font-family:Arial, sans-serif;
-            font-family:'Roboto', sans-serif!important;/*edit:change to match posts font*/
+            font-family:'Roboto', sans-serif!important; /*GUIDE: quote posts source font (match with posts font)*/
             font-size:15px;
             font-weight:normal;
         }
@@ -494,13 +493,11 @@
             display:inline-block;
             background:rgba({RGBcolor:posts accent},0.5);
             padding-left:25px;
-            font-family:Arial, sans-serif;
-            font-family:'Roboto', sans-serif!imortant;/*edit: link posts font*/
         }
         
         a.link{
             color:rgba({RGBcolor:text}, 0.8);
-            padding:1em; /* padding */
+            padding:1em; 
             text-decoration:none;
         } 
         
@@ -510,6 +507,8 @@
        
         .link-title {
             font-size:1.8em; 
+            font-family:Arial, sans-serif;
+            font-family:'Source Sans Pro', sans-serif!important; /*GUIDE: link post title font*/
         }
      
         .link-desc {
@@ -690,7 +689,7 @@
             box-sizing:border-box;
             background:rgba({RGBcolor:text},0.95);
             color:{color:posts};
-            font-family:Lucida Console, Consolas, Menlo, monospace;/*edit:codeblocks font*/
+            font-family:Lucida Console, Consolas, Menlo, monospace; /*GUIDE: code blocks font*/
             max-height:141px;
             font-size:12px;
             line-height:18px;
@@ -707,11 +706,11 @@
         .time {
             margin:0;
             padding:20px 20px 10px 20px;
-            font-size:13px;
+            font-family:'Source Sans Pro', sans-serif!important; /*GUIDE: posted date font*/
+            font-size:14px;
             font-weight:bold;
             text-transform:uppercase; 
-			font-family:Arial, sans-serif;
-            font-family:'Source Sans Pro', sans-serif!imortant;/*edit:notes and tags font*/
+            letter-spacing:1px;
             border-bottom:1px solid rgba({RGBcolor:accent},0.4); 
         }
 
@@ -719,8 +718,6 @@
             padding:15px;
             font-size:13px;
             text-transform:uppercase; 
-			font-family:Arial, sans-serif;
-            font-family:'Source Sans Pro', sans-serif!imortant;/*edit:notes and tags font*/
             border-top:1px solid rgba({RGBcolor:accent},0.4); 
         }
         
@@ -762,7 +759,7 @@
             width:100%;
             height:100%;
             opacity:0;
-            z-index:15;
+            z-index:4;
         }
         
         .like_button iframe {
@@ -805,9 +802,8 @@
         
     /**** TAGS ****/
          .tagswrap {
-			font-family:Arial, sans-serif;
-            font-family:'Source Sans Pro', sans-serif!imortant;/*edit:notes and tags font*/
             position:relative;
+            font-family:'Source Sans Pro', sans-serif!important; /*GUIDE: tags font*/
             padding:10px 5px 5px 5px;
             text-align:left;
         }
@@ -1015,14 +1011,56 @@
 
 /* ------- MEDIA QUERY ------- */
         @media only screen and (max-width: 1100px) {
-            aside {
-                display:none;
-                position:relative;
-                width:100%;
-                left:auto;
-                max-width:700px;
-                margin:50px auto;
+            aside { 
+                height:0%; 
+                width:100%; 
+                max-width:100%;
+                position:fixed; 
+                top:0; 
+                left:0; 
+                background-color:{color:sidebar}; 
+                overflow-y:hidden; 
+                transition:1.0s; 
+                z-index:5;
+            } 
+            
+            #closebtn {
+                position:fixed; 
+                top:20px; 
+                right:20px;
+                z-index:6;
             }
+            
+            .closebttn { 
+                font-size:21px;
+                color:{color:sidebar links};
+            }
+            
+            .closebttn:hover { 
+                color:{color:sidebar links hover};
+            }
+            
+            .mobnavbutton {
+                position:fixed;
+                bottom:10px;
+                right:10px;
+                width:21px;
+                height:21px;
+                padding:5px;
+                background:{color:sidebar};
+                border:1px solid {color:sidebar};
+                font-size:16px;
+                color:{color:sidebar links};
+                border-radius:3px;
+                text-align:center;
+                line-height:21px;
+                overflow:hidden;
+                z-index:8;
+            }
+            
+            .mobnavbutton:hover {
+                color:{color:sidebar links hover};
+            } 
             
             section {
                 width:100%;
@@ -1065,15 +1103,57 @@
         }
         
         @media only screen and (max-width: 700px) {
-            aside {
-                display:none;
-                position:relative;
-                width:100%;
-                left:auto;
-                max-width:700px;
-                margin:50px auto;
+            aside { 
+                height:0%; 
+                width:100%; 
+                max-width:100%;
+                position:fixed; 
+                top:0; 
+                left:0; 
+                background-color:{color:sidebar}; 
+                overflow-y:hidden; 
+                transition:1.0s; 
+                z-index:5;
+            } 
+            
+            #closebtn {
+                position:fixed; 
+                top:15px; 
+                right:15px;
+                z-index:6;
             }
             
+            .closebttn { 
+                font-size:21px;
+                color:{color:sidebar links};
+            }
+            
+            .closebttn:hover { 
+                color:{color:sidebar links hover};
+            }
+            
+            .mobnavbutton {
+                position:fixed;
+                bottom:10px;
+                right:10px;
+                width:21px;
+                height:21px;
+                padding:5px;
+                background:{color:sidebar};
+                border:1px solid {color:sidebar};
+                font-size:16px;
+                color:{color:sidebar links};
+                border-radius:3px;
+                text-align:center;
+                line-height:21px;
+                overflow:hidden;
+                z-index:8;
+            }
+            
+            .mobnavbutton:hover {
+                color:{color:sidebar links hover};
+            } 
+    
             section {
                 margin-top:0;
                 width:100%;
@@ -1169,6 +1249,16 @@
     {/block:IfShowLoadingScreen}
     {/block:IndexPage}
      
+     <div class="mobnavbutton">
+        <span class="fas fa-bars" onclick="openNav()"></span>
+    </div>
+    
+    <div id="closebtn">
+        <a href="javascript:void(0)" class="closebttn" onclick="closeNav()">
+        <span class="th th-cross-1-o"></span></a>
+    </div>
+        
+     
     <!-- main container -->    
         <main class="flex">
         
@@ -1178,7 +1268,8 @@
         </header>
         
     <!------- SIDEBAR ------->
-        <aside>
+    
+        <aside id="myNav">
         <div class="sideheader">
         {block:IfShowAvatar}
             <img src="{portraiturl-128}" class="{AvatarShape}">
@@ -1240,7 +1331,7 @@
                 <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 {text:double archive}
             {/block:IfDoubleLink}
-            </div>
+            </div></div> 
         </aside>
       
         <section>
@@ -1360,7 +1451,7 @@
                {Video-700}
             </div>{/block:Video}
       
-    <!------- AUDIO POSTS (¡FIX) ------->
+    <!------- AUDIO POSTS ------->
         {block:audio}<div id="audiowrap">
         {block:audioplayer}
             <div class="playbutton">{audioplayergrey}</div>
@@ -1484,7 +1575,7 @@
 
         </main> 
 <!------------------------------ END CONTAINER ----------------------------->
-
+        
         <footer>
             ©2020 BLI Industries, Inc
             <div id="credz">
@@ -1492,22 +1583,37 @@
                 title="made by @gatoscodes"><span class="fas fa-barcode">
             </span></a></div>
         </footer>
-
         
-    <script>
-    // ------- VIDEO RESIZING -------
-        function flexFrame() {
-            $(".caption").each(function() {
+        
+        <script> 
+            function openNav() { 
+                document.getElementById("myNav").style.height = "100%"; 
+                document.getElementById("myNav").style.zIndex = "11"; 
+                document.getElementById("closebtn").style.zIndex = "12"; 
+            } 
+      
+            function closeNav() { 
+                document.getElementById("myNav").style.height = "0%"; 
+                document.getElementById("myNav").style.zIndex = "5"; 
+                document.getElementById("closebtn").style.zIndex = "6"; 
+            } 
+        </script> 
+    
+    
+        <script>
+        // ------- VIDEO RESIZING -------
+            function flexFrame() {
+                $(".caption").each(function() {
                 $(this).find("iframe").wrap("<div class='capframe'></div>"); 
-        flexibleFrames($(".capframe"));
-        });
-            flexibleFrames($(".video"));
-        }
-        $(document).ready(flexFrame);
-        
-        $(document).ready(function() {
-            flexibleFrames($(".video"));  
-        });
-    </script>
+            flexibleFrames($(".capframe"));
+            });
+                flexibleFrames($(".video"));
+            }
+            $(document).ready(flexFrame);
+            
+            $(document).ready(function() {
+                flexibleFrames($(".video"));  
+            });
+        </script>
 </body>
 </html>
